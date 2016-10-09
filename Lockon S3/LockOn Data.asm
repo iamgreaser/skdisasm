@@ -1054,14 +1054,14 @@ ArtKos_SaveScreenMisc:			binclude "General/Save Menu/Kosinski Art/Misc.bin"
 ; Music Bank 3
 ; ---------------------------------------------------------------------------
 Snd_Bank3_Start:	startBank
-Snd_AIZ1:			binclude	"Sound/Music/AIZ1.bin"
-Snd_AIZ2:			binclude	"Sound/Music/AIZ2.bin"
-Snd_HCZ1:			binclude	"Sound/Music/HCZ1.bin"
-Snd_HCZ2:			binclude	"Sound/Music/HCZ2.bin"
-Snd_MGZ1:			binclude	"Sound/Music/MGZ1.bin"
-Snd_MGZ2:			binclude	"Sound/Music/MGZ2.bin"
-Snd_CNZ2:			binclude	"Sound/Music/CNZ2.bin"
-Snd_CNZ1:			binclude	"Sound/Music/CNZ1.bin"
+Snd_AIZ1:			include	"Sound/mus/AIZ1.asm"
+Snd_AIZ2:			include	"Sound/mus/AIZ2.asm"
+Snd_HCZ1:			include	"Sound/mus/HCZ1.asm"
+Snd_HCZ2:			include	"Sound/mus/HCZ2.asm"
+Snd_MGZ1:			include	"Sound/mus/MGZ1.asm"
+Snd_MGZ2:			include	"Sound/mus/MGZ2.asm"
+Snd_CNZ2:			include	"Sound/mus/CNZ2.asm"
+Snd_CNZ1:			include	"Sound/mus/CNZ1.asm"
 
 	finishBank
 
@@ -1069,9 +1069,11 @@ Snd_CNZ1:			binclude	"Sound/Music/CNZ1.bin"
 ; Music Bank 4
 ; ---------------------------------------------------------------------------
 Snd_Bank4_Start:	startBank
-Snd_ICZ2:			binclude	"Sound/Music/ICZ2.bin"
-Snd_ICZ1:			binclude	"Sound/Music/ICZ1.bin"
-Snd_LBZ2:			binclude	"Sound/Music/LBZ2.bin"
+Snd_ICZ2:			include	"Sound/mus/ICZ2.asm"
+Snd_ICZ1:			include	"Sound/mus/ICZ1.asm"
+Snd_LBZ2:			include	"Sound/mus/LBZ2.asm"
+	; FIXME this wouldn't rip
+;Snd_LBZ1:			include	"Sound/mus/LBZ1.asm"
 Snd_LBZ1:			binclude	"Sound/Music/LBZ1.bin"
 
 	finishBank
@@ -1080,19 +1082,19 @@ Snd_LBZ1:			binclude	"Sound/Music/LBZ1.bin"
 ; Music Bank 5
 ; ---------------------------------------------------------------------------
 Snd_Bank5_Start:	startBank
-		org		soundBankStart+$AE8
-Snd_GumBonus:		binclude	"Sound/Music/Gum Ball Machine.bin"
-		org		soundBankStart+$19F7
-Snd_ALZ:			binclude	"Sound/Music/Azure Lake.bin"
-Snd_BPZ:			binclude	"Sound/Music/Balloon Park.bin"
-Snd_DPZ:			binclude	"Sound/Music/Desert Palace.bin"
-Snd_CGZ:			binclude	"Sound/Music/Chrome Gadget.bin"
-Snd_EMZ:			binclude	"Sound/Music/Endless Mine.bin"
-		org		soundBankStart+$6587
-Snd_S3Credits:		binclude	"Sound/Music/Sonic 3 Credits.bin"
-		org		soundBankStart+$75E4
-Snd_2PMenu:			binclude	"Sound/Music/Competition Menu.bin"	
-Snd_Drown:			binclude	"Sound/Music/Countdown.bin"
+		;org		soundBankStart+$AE8
+Snd_GumBonus:		include	"Sound/mus/Gum Ball Machine.asm"
+		;org		soundBankStart+$19F7
+Snd_ALZ:			include	"Sound/mus/Azure Lake.asm"
+Snd_BPZ:			include	"Sound/mus/Balloon Park.asm"
+Snd_DPZ:			include	"Sound/mus/Desert Palace.asm"
+Snd_CGZ:			include	"Sound/mus/Chrome Gadget.asm"
+Snd_EMZ:			include	"Sound/mus/Endless Mine.asm"
+		;org		soundBankStart+$6587
+Snd_S3Credits:		include	"Sound/mus/Sonic 3 Credits.asm"
+		;org		soundBankStart+$75E4
+Snd_2PMenu:			include	"Sound/mus/Competition Menu.asm"
+Snd_Drown:			include	"Sound/mus/Countdown.asm"
 
 	finishBank
 

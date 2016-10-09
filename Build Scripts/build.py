@@ -14,7 +14,7 @@ sk_hash = "6e12e6b33c26ebfcd0be433251d21cf6284eafe9f71b027bda3767ae59affec1"
 sk_size = 2097152
 
 # Verbose errors?
-verbose_errors = False
+verbose_errors = True
 
 # Paths to build tools, depending on OS
 

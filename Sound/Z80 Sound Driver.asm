@@ -79,6 +79,7 @@ DAC_Null_Chain macro rate,dacptr,linkptr
 	dc.w 	dacptr_Len,k68z80Pointer(linkptr+3-soundBankStart)
     endm
 
+	include	"Sound/mus/macros.asm"
 ; ===========================================================================
 ; Music Banks
 ; ===========================================================================
@@ -88,14 +89,14 @@ DAC_Null_Chain macro rate,dacptr,linkptr
 ; Music Bank 1
 ; ---------------------------------------------------------------------------
 Snd_Bank1_Start:
-Snd_SKCredits:		binclude 	"Sound/Music/Credits.bin"
-Snd_GameOver:		binclude	"Sound/Music/Game Over.bin"
-Snd_Continue:		binclude	"Sound/Music/Continue.bin"
-Snd_Results:		binclude	"Sound/Music/Level Outro.bin"
-Snd_Invic:			binclude	"Sound/Music/Invincible.bin"
-Snd_Menu:			binclude	"Sound/Music/Menu.bin"
-Snd_FinalBoss:		binclude	"Sound/Music/Final Boss.bin"
-Snd_PresSega:		binclude	"Sound/Music/Game Complete.bin"
+Snd_SKCredits:		include 	"Sound/mus/Credits.asm"
+Snd_GameOver:		include	"Sound/mus/Game Over.asm"
+Snd_Continue:		include	"Sound/mus/Continue.asm"
+Snd_Results:		include	"Sound/mus/Level Outro.asm"
+Snd_Invic:			include	"Sound/mus/Invincible.asm"
+Snd_Menu:			include	"Sound/mus/Menu.asm"
+Snd_FinalBoss:		include	"Sound/mus/Final Boss.asm"
+Snd_PresSega:		include	"Sound/mus/Game Complete.asm"
 
 Snd_Bank1_End
 
@@ -110,27 +111,27 @@ Snd_Bank1_End
 ; Music Bank 2
 ; ---------------------------------------------------------------------------
 Snd_Bank2_Start:	startBank
-Snd_FBZ1:			binclude	"Sound/Music/FBZ1.bin"
-Snd_FBZ2:			binclude	"Sound/Music/FBZ2.bin"
-Snd_MHZ1:			binclude	"Sound/Music/MHZ1.bin"
-Snd_MHZ2:			binclude	"Sound/Music/MHZ2.bin"
-Snd_SOZ1:			binclude	"Sound/Music/SOZ1.bin"
-Snd_SOZ2:			binclude	"Sound/Music/SOZ2.bin"
-Snd_LRZ1:			binclude	"Sound/Music/LRZ1.bin"
-Snd_LRZ2:			binclude	"Sound/Music/LRZ2.bin"
-Snd_SSZ:			binclude	"Sound/Music/SSZ.bin"
-Snd_DEZ1:			binclude	"Sound/Music/DEZ1.bin"
-Snd_DEZ2:			binclude	"Sound/Music/DEZ2.bin"
-Snd_Minib_SK:		binclude	"Sound/Music/Miniboss.bin"
-Snd_Boss:			binclude	"Sound/Music/Zone Boss.bin"
-Snd_DDZ:			binclude	"Sound/Music/DDZ.bin"
-Snd_PachBonus:		binclude	"Sound/Music/Pachinko.bin"
-Snd_SpecialS:		binclude	"Sound/Music/Special Stage.bin"
-Snd_SlotBonus:		binclude	"Sound/Music/Slots.bin"
-Snd_Knux:			binclude	"Sound/Music/Knuckles.bin"
-Snd_Title:			binclude	"Sound/Music/Title.bin"
-Snd_1UP:			binclude	"Sound/Music/1UP.bin"
-Snd_Emerald:		binclude	"Sound/Music/Chaos Emerald.bin"
+Snd_FBZ1:			include	"Sound/mus/FBZ1.asm"
+Snd_FBZ2:			include	"Sound/mus/FBZ2.asm"
+Snd_MHZ1:			include	"Sound/mus/MHZ1.asm"
+Snd_MHZ2:			include	"Sound/mus/MHZ2.asm"
+Snd_SOZ1:			include	"Sound/mus/SOZ1.asm"
+Snd_SOZ2:			include	"Sound/mus/SOZ2.asm"
+Snd_LRZ1:			include	"Sound/mus/LRZ1.asm"
+Snd_LRZ2:			include	"Sound/mus/LRZ2.asm"
+Snd_SSZ:			include	"Sound/mus/SSZ.asm"
+Snd_DEZ1:			include	"Sound/mus/DEZ1.asm"
+Snd_DEZ2:			include	"Sound/mus/DEZ2.asm"
+Snd_Minib_SK:		include	"Sound/mus/Miniboss.asm"
+Snd_Boss:			include	"Sound/mus/Zone Boss.asm"
+Snd_DDZ:			include	"Sound/mus/DDZ.asm"
+Snd_PachBonus:		include	"Sound/mus/Pachinko.asm"
+Snd_SpecialS:		include	"Sound/mus/Special Stage.asm"
+Snd_SlotBonus:		include	"Sound/mus/Slots.asm"
+Snd_Knux:			include	"Sound/mus/Knuckles.asm"
+Snd_Title:			include	"Sound/mus/Title.asm"
+Snd_1UP:			include	"Sound/mus/1UP.asm"
+Snd_Emerald:		include	"Sound/mus/Chaos Emerald.asm"
 
 	finishBank
 
